@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *allBtn;
 /**所有的模型数据*/
 @property (strong ,nonatomic) NSMutableArray *modelArr;
+/**删除数组*/
+@property (nonatomic, strong) NSMutableArray *deletedArr;
 /**分组数组*/
 @property (strong ,nonatomic) NSMutableArray *sectionArr;
 @end
@@ -56,21 +58,26 @@
 
 //    //所有被选中的行数
     NSArray *arr=[self.tab indexPathsForSelectedRows];
-    NSMutableArray *deletedArr = [NSMutableArray array];
+    _deletedArr = [NSMutableArray array];
     
     for (NSIndexPath *indexPath in arr) {
         //将选中行数模型数据保存到一个数组中
 //        NSLog(@"组=%ld 行=%ld",indexPath.section,indexPath.row);
          NSLog(@"shu=%@",self.modelArr[indexPath.row]);
-        [deletedArr addObject:self.modelArr[indexPath.row]];
+        [self.deletedArr addObject:self.modelArr[indexPath.row]];
     }
     
-    [self.modelArr removeObjectsInArray:deletedArr];
+    [self.modelArr removeObjectsInArray:self.deletedArr];
     [self.tab reloadData];
 }
-//全选
+//全选  有bug
 - (IBAction)allSelection:(UIButton *)sender {
-    
+//    [self.tab setEditing:!self.tab.isEditing animated:YES];
+    for (int i =0; i<self.modelArr.count; i++) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
+        [self.tab selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+        [self.deletedArr addObjectsFromArray:self.modelArr];
+    }
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

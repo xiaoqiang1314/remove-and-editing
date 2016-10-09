@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0E92B01DAA4A2900AA0F8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0E92AE1DAA4A2900AA0F8D /* ViewController.m */; };
+		EF0E92B11DAA4A2900AA0F8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0E92AF1DAA4A2900AA0F8D /* Main.storyboard */; };
 		EF1D75181DA94527004B0C48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D75171DA94527004B0C48 /* main.m */; };
 		EF1D751B1DA94527004B0C48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D751A1DA94527004B0C48 /* AppDelegate.m */; };
 		EF1D75231DA94527004B0C48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1D75221DA94527004B0C48 /* Assets.xcassets */; };
 		EF1D75261DA94527004B0C48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1D75241DA94527004B0C48 /* LaunchScreen.storyboard */; };
 		EF1D75311DA94527004B0C48 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D75301DA94527004B0C48 /* ____Tests.m */; };
 		EF1D753C1DA94527004B0C48 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D753B1DA94527004B0C48 /* ____UITests.m */; };
-		EF1D754C1DA94555004B0C48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D754A1DA94554004B0C48 /* ViewController.m */; };
-		EF1D754D1DA94555004B0C48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1D754B1DA94554004B0C48 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF0E92AD1DAA4A2900AA0F8D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF0E92AE1DAA4A2900AA0F8D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF0E92AF1DAA4A2900AA0F8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EF1D75131DA94527004B0C48 /* 编辑删除.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "编辑删除.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1D75171DA94527004B0C48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF1D75191DA94527004B0C48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,9 +51,6 @@
 		EF1D75371DA94527004B0C48 /* 编辑删除UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "编辑删除UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1D753B1DA94527004B0C48 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		EF1D753D1DA94527004B0C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF1D75491DA94554004B0C48 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF1D754A1DA94554004B0C48 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EF1D754B1DA94554004B0C48 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +103,9 @@
 			children = (
 				EF1D75191DA94527004B0C48 /* AppDelegate.h */,
 				EF1D751A1DA94527004B0C48 /* AppDelegate.m */,
-				EF1D75491DA94554004B0C48 /* ViewController.h */,
-				EF1D754A1DA94554004B0C48 /* ViewController.m */,
-				EF1D754B1DA94554004B0C48 /* Main.storyboard */,
+				EF0E92AD1DAA4A2900AA0F8D /* ViewController.h */,
+				EF0E92AE1DAA4A2900AA0F8D /* ViewController.m */,
+				EF0E92AF1DAA4A2900AA0F8D /* Main.storyboard */,
 				EF1D75221DA94527004B0C48 /* Assets.xcassets */,
 				EF1D75241DA94527004B0C48 /* LaunchScreen.storyboard */,
 				EF1D75271DA94527004B0C48 /* Info.plist */,
@@ -246,7 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1D754D1DA94555004B0C48 /* Main.storyboard in Resources */,
+				EF0E92B11DAA4A2900AA0F8D /* Main.storyboard in Resources */,
 				EF1D75261DA94527004B0C48 /* LaunchScreen.storyboard in Resources */,
 				EF1D75231DA94527004B0C48 /* Assets.xcassets in Resources */,
 			);
@@ -273,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1D754C1DA94555004B0C48 /* ViewController.m in Sources */,
+				EF0E92B01DAA4A2900AA0F8D /* ViewController.m in Sources */,
 				EF1D751B1DA94527004B0C48 /* AppDelegate.m in Sources */,
 				EF1D75181DA94527004B0C48 /* main.m in Sources */,
 			);
@@ -493,6 +493,7 @@
 				EF1D75421DA94527004B0C48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF1D75431DA94527004B0C48 /* Build configuration list for PBXNativeTarget "编辑删除Tests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +502,7 @@
 				EF1D75451DA94527004B0C48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF1D75461DA94527004B0C48 /* Build configuration list for PBXNativeTarget "编辑删除UITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +511,7 @@
 				EF1D75481DA94527004B0C48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

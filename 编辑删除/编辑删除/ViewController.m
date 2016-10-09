@@ -10,8 +10,12 @@
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tab;
+@property (weak, nonatomic) IBOutlet UIButton *removeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *allBtn;
 /**所有的模型数据*/
 @property (strong ,nonatomic) NSMutableArray *modelArr;
+/**分组数组*/
+@property (strong ,nonatomic) NSMutableArray *sectionArr;
 @end
 
 @implementation ViewController
@@ -21,6 +25,8 @@
     self.tab.delegate =self;
     self.tab.dataSource = self;
     self.tab.allowsMultipleSelectionDuringEditing = YES;
+    self.removeBtn.hidden=YES;
+    self.allBtn.hidden = YES;
 }
 -(NSMutableArray *)modelArr{
     if (!_modelArr) {
@@ -30,23 +36,47 @@
    
     return _modelArr;
 }
+
+-(NSMutableArray *)sectionArr{
+    if (!_sectionArr) {
+        _sectionArr = [NSMutableArray arrayWithObjects:@"A",@"B",@"C",@"D",@"E",@"F", nil];
+
+       }
+    return _sectionArr;
+}
+//批量删除
 - (IBAction)deleteClick:(id)sender {
     [self.tab setEditing:!self.tab.isEditing animated:YES];
+    self.removeBtn.hidden  =!self.tab.isEditing;
+    self.allBtn.hidden  =!self.tab.isEditing;
 }
+
+//删除
 - (IBAction)deleteBtn:(id)sender {
-    //所有被选中的行数
+
+//    //所有被选中的行数
     NSArray *arr=[self.tab indexPathsForSelectedRows];
     NSMutableArray *deletedArr = [NSMutableArray array];
-    for (NSIndexPath *path in arr) {
+    
+    for (NSIndexPath *indexPath in arr) {
         //将选中行数模型数据保存到一个数组中
-        [deletedArr addObject:self.modelArr[path.row]];
+//        NSLog(@"组=%ld 行=%ld",indexPath.section,indexPath.row);
+         NSLog(@"shu=%@",self.modelArr[indexPath.row]);
+        [deletedArr addObject:self.modelArr[indexPath.row]];
     }
     
     [self.modelArr removeObjectsInArray:deletedArr];
     [self.tab reloadData];
 }
+//全选
+- (IBAction)allSelection:(UIButton *)sender {
+    
+}
 
-
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    NSLog(@"数组=%lu",(unsigned long)self.sectionArr.count);
+    return self.sectionArr.count;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.modelArr.count;
 }
@@ -59,4 +89,9 @@
     cell.textLabel.text =self.modelArr[indexPath.row];
     return cell;
 }
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return self.sectionArr[section];
+}
+
+
 @end

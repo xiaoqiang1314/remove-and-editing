@@ -36,26 +36,41 @@
                                     <action selector="deleteClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dM1-SZ-pz3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBy-Dh-7cf">
+                                <rect key="frame" x="285" y="33" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="QzZ-QH-w5t"/>
+                                    <constraint firstAttribute="height" constant="30" id="v76-5H-fWf"/>
+                                </constraints>
+                                <state key="normal" title="全选"/>
+                                <connections>
+                                    <action selector="allSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EMg-I1-oQt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DBy-Dh-7cf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="10Q-RZ-TXS"/>
                             <constraint firstItem="QkE-5p-Ekz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="1kR-65-8Vs"/>
                             <constraint firstItem="JNE-mc-GfI" firstAttribute="top" secondItem="auk-lm-EgM" secondAttribute="bottom" id="5vU-3k-5Dn"/>
                             <constraint firstItem="auk-lm-EgM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="Lld-yc-tKR"/>
                             <constraint firstItem="QkE-5p-Ekz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="35" id="NbX-EC-l0O"/>
                             <constraint firstAttribute="trailing" secondItem="JNE-mc-GfI" secondAttribute="trailing" id="Nig-3i-D2k"/>
+                            <constraint firstItem="DBy-Dh-7cf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="PAs-vc-IQ1"/>
                             <constraint firstAttribute="trailing" secondItem="auk-lm-EgM" secondAttribute="trailing" constant="24" id="TUA-Vq-kDZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JNE-mc-GfI" secondAttribute="bottom" id="eeU-tN-ZVF"/>
                             <constraint firstItem="JNE-mc-GfI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uGP-JG-X3W"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allBtn" destination="DBy-Dh-7cf" id="MoG-cz-lLB"/>
+                        <outlet property="removeBtn" destination="QkE-5p-Ekz" id="2Oa-AM-JIP"/>
                         <outlet property="tab" destination="JNE-mc-GfI" id="ZGm-xj-9CH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="153" y="421"/>
+            <point key="canvasLocation" x="221" y="402"/>
         </scene>
     </scenes>
 </document>
